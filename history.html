@@ -9,6 +9,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="script.js" defer></script>
+  <script>
+  // Strips out .html from the address bar automatically
+  if (window.location.pathname.endsWith('.html')) {
+    let cleanUrl = window.location.pathname.substring(0, window.location.pathname.length - 5);
+    // Fixes the main root home page to show completely clean
+    if (cleanUrl.endsWith('/index')) {
+      cleanUrl = '/';
+    }
+    window.history.replaceState(null, '', cleanUrl + window.location.search);
+  }
+</script>
+
 </head>
 <body>
   <header class="site-header"><nav class="navbar"><a href="index.html" class="brand"><img src="assets/blue-covenant-seal.png" alt="Blue Covenant Family seal" /><span>Blue Covenant Family</span></a><button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button><ul class="nav-links" id="navLinks"><li><a href="index.html">Home</a></li><li><a href="centennial.html">Centennial</a></li><li><a class="active" href="history.html">History & Legacy</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></nav></header>
