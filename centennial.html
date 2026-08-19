@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Covenant Family | Official Family Website</title>
+  <meta name="description" content="The official digital home of the Blue Covenant Family, preserving family history, faith, legacy, and the 100 Year Centennial Celebration in May 2027." />
+  <link rel="preload" as="image" href="assets/blue-covenant-seal.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script>
+  // Strips out .html from the address bar automatically
+  if (window.location.pathname.endsWith('.html')) {
+    let cleanUrl = window.location.pathname.substring(0, window.location.pathname.length - 5);
+    // Fixes the main root home page to show completely clean
+    if (cleanUrl.endsWith('/index')) {
+      cleanUrl = '/';
+    }
+    window.history.replaceState(null, '', cleanUrl + window.location.search);
+  }
+</script>
   <script>
   // Dynamically strips out the .html extension from the address bar
   if (window.location.pathname.endsWith('.html')) {
